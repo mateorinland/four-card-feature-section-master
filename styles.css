@@ -106,9 +106,25 @@ body {
   background-color: white;
   text-align: left;
   margin: 1.5rem 0;
-  padding: 1.5rem 1.2rem 1.5rem 2rem;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
   border-radius: 5px;
   box-shadow: hsl(233, 10%, 84%) 0px 5px 15px;
+}
+
+.supervisor {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+  border-top: 4px solid hsl(212, 86%, 64%);
 }
 
 .card-title {
@@ -135,4 +151,36 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 62.5rem) {
+  body {
+    padding: 7rem 10rem;
+  }
+  .heading-section {
+    padding: 0 20rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .card {
+    margin: 0;
+  }
+  .cards-section {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .supervisor {
+    grid-row: 2/4;
+  }
+  .team-builder {
+    grid-area: 1/2/3/3;
+  }
+  .karma {
+    grid-area: 3/2/5/3;
+  }
+  .calculator {
+    grid-area: 2/3/4/4;
+  }
 }/*# sourceMappingURL=styles.css.map */
