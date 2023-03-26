@@ -1,0 +1,23 @@
+@import "reset";
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$Very_Dark_Blue: hsl(234, 12%, 34%);
+$Grayish_Blue: hsl(229, 6%, 66%);
+$Very_Light_Gray: hsl(0, 0%, 98%);
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
