@@ -8,115 +8,152 @@ $Very_Dark_Blue: hsl(234, 12%, 34%);
 $Grayish_Blue: hsl(229, 6%, 66%);
 $Very_Light_Gray: hsl(0, 0%, 98%);
 
-html {
-    font-family: 'Poppins', sans-serif;
-    color: $Very_Dark_Blue;
-    text-align: center;
+body {
+  font-size: 0.938rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: $Very_Dark_Blue;
+  background-color: $Very_Light_Gray;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-body {
-    padding: 5rem 2rem;
-    font-size: 1rem;
-    background-color: $Very_Light_Gray;
+@media screen and (min-width: 62.5rem) {
+  //1000px
+  body {
+    padding: 5rem 10rem;
+  }
+}
+
+/* MAIN */
+/** HEADING REGION **/
+
+@media screen and (min-width: 62.5rem) {
+  .heading-section {
+    padding: 0 20rem;
+  }
 }
 
 .title {
-    font-weight: 200;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .title {
+    font-size: 2.2rem;
+  }
 }
 
 .bold-title-text {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.heading-text, .card-text {
-    color: $Grayish_Blue;
+.info,
+.card-text {
+  color: #6f7177;
+  //Replaced FrontendMentor's provided color for the one suggested by Accessibility Insights for color contrast concerns
 }
+
+/** CARDS REGION **/
 
 .cards-section {
-    margin-top: 4rem;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .cards-section {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 .card {
-    background-color: white;
-    text-align: left;
-    margin: 1.5rem 0;
-    padding: 1.5rem 1.5rem 1.5rem 2rem;
-    border-radius: 5px;
-    box-shadow: hsl(233, 10%, 84%) 0px 5px 15px;
+  background-color: white;
+  text-align: left;
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.7rem 1.7rem 2rem;
+  border-radius: 0.313rem;
+  box-shadow: hsl(233, 10%, 84%) 0 0.313rem 0.938rem;
+  max-width: 23rem;
 }
 
-.supervisor {
-    border-top: 4px solid $Cyan;
-}
-
-.team-builder {
-    border-top: 4px solid $Red;
-}
-
-.karma {
-    border-top: 4px solid $Orange;
-}
-
-.calculator {
-    border-top: 4px solid $Blue;
+@media screen and (min-width: 62.5rem) {
+  .card {
+    margin: 0;
+  }
 }
 
 .card-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  margin: 0.6rem 0 0.4rem;
 }
 
 .card-text {
-    font-size: 0.8rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
 .card-icon {
-    width: 22%;
-    display: -webkit-box;
-    margin-left: auto;
+  width: 22%;
+  display: -webkit-box;
+  margin-left: auto;
 }
+
+.supervisor {
+  border-top: 0.25rem solid $Cyan;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .supervisor {
+    grid-row: 2 / 4;
+  }
+}
+
+.team-builder {
+  border-top: 0.25rem solid $Red;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .team-builder {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+}
+
+.karma {
+  border-top: 0.25rem solid $Orange;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .karma {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+}
+
+.calculator {
+  border-top: 0.25rem solid $Blue;
+}
+
+@media screen and (min-width: 62.5rem) {
+  .calculator {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+}
+
+/* CONTENTINFO */
 
 .attribution {
-    font-size: 11px; text-align: center;
-
+  font-size: 0.733rem;
+  text-align: center;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-@media only screen and (min-width: 62.5rem) { //1000px 
-    body {
-        padding: 7rem 10rem;
-    }
-    .heading-section {
-        padding: 0 20rem;
-    }
-    .title {
-        font-size: 2.2rem;
-    }
-    .card {
-        margin: 0;
-    }
-    .cards-section {
-        display: grid;
-        grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
-        gap: 2rem;
-    }
-    .supervisor {
-        grid-row: 2 / 4;
-    }
-    .team-builder {
-        grid-area: 1 / 2 / 3 / 3;
-    }
-    .karma {
-        grid-area: 3 / 2 / 5 / 3;
-    }
-    .calculator {
-        grid-area: 2 / 3 / 4 / 4;
-    }
+.attribution-link {
+  color: hsl(228, 45%, 44%);
 }
